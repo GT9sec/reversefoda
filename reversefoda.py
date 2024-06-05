@@ -65,9 +65,16 @@ Team:	   skullsec """)
 else:
 	print("opção invalida")
 
-print("\nEnsira a porta da escuta: ")
-fds = int(input(">>> "))
-print("\nescutando...")
-os.system("nc -nlvp {}".format(fds))
+print("\ndeseja iniciar uma escuta?[s/n]")
+fd = input(">>> ")
+if fd == 's':
+	print("\nEnsira a porta da escuta: ")
+	fds = int(input(">>> "))
+	print("\nescutando...")
+	os.system("nc -nlvp {}".format(fds))
+elif fd == 'n':
+	from time import sleep
+	sleep(1)
+	print("me segue no insta e no ttk  @gt9sec")
 
 
