@@ -15,8 +15,8 @@ print("""
 █████╗  ██║   ██║██║  ██║███████║
 ██╔══╝  ██║   ██║██║  ██║██╔══██║         
 ██║     ╚██████╔╝██████╔╝██║  ██║                 		
-╚═╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝                 
-                                 by: @gt9sec 		""")
+╚═╝      ╚═════╝ ╚═════╝ ╚═╝  ╚═╝     [>Beta 1.0<]            
+                                      [ @gt9sec ] 		""")
 
 print("""
 [ 1 ] Python
@@ -68,7 +68,7 @@ else:
 print("\ndeseja iniciar uma escuta?[s/n]")
 fd = input(">>> ")
 if fd == 's':
-	print("\nEnsira a porta da escuta: ")
+	print("\nInsira a porta da escuta: ")
 	fds = int(input(">>> "))
 	print("\nescutando...")
 	os.system("nc -nlvp {}".format(fds))
